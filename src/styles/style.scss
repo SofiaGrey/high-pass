@@ -1,0 +1,610 @@
+@import "node_modules/normalize.css/normalize";
+@import "_fonts.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p,
+input {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "TT Firs Neue", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+body {
+  min-width: 320px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1230px;
+  padding: 0 30px;
+}
+
+.btn {
+  padding: 15.5px 20px 15.5px 23px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 18.75px;
+  font-weight: 700;
+  color: $white;
+  background-color: #ff6e30;
+  border: none;
+  letter-spacing: -0.2px;
+  outline: none;
+  cursor: pointer;
+}
+
+// header
+
+.header {
+  background-color: $colorBgGrey;
+  &__container {
+    display: flex;
+    align-items: center;
+    padding: 22.5px 0;
+  }
+  &__logo {
+    margin-right: 118.75px;
+    flex-shrink: 0;
+  }
+  &__nav {
+    margin-right: auto;
+  }
+  &__list {
+    display: flex;
+    gap: 0 79px;
+  }
+  &__link {
+    padding: 0 5px;
+    font-family: "TT Firs Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20.64px;
+    color: $white;
+    outline: none;
+    text-wrap: nowrap;
+    transition:
+      color 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
+    &:focus-visible {
+      background-color: $secondary;
+    }
+    &:hover {
+      color: $primary;
+    }
+    &:active {
+      color: $accent;
+    }
+  }
+
+  &__search {
+    width: 25px;
+    height: 25px;
+  }
+
+  &__btn {
+    padding: 0;
+    background-color: inherit;
+  }
+}
+
+// hero
+
+.hero {
+  padding: 40px 0 68px;
+  &__container,
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  &__img {
+    display: block;
+  }
+  &__left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    padding: 60px 59px;
+    background: no-repeat center url("images/photo1.jpg");
+    background-size: cover;
+    &::before {
+      content: "#мастеркласс";
+      @include makeHashtag();
+    }
+    &-descr {
+      margin-bottom: 3px;
+      font-size: 16px;
+      line-height: 15.75px;
+      font-weight: 400;
+      letter-spacing: 0.1px;
+      color: $white;
+    }
+
+    &-title {
+      margin-bottom: 19px;
+      font-family: "TT Firs Neue", sans-serif;
+      font-size: 36px;
+      line-height: 37.44px;
+      font-weight: 700;
+      color: $white;
+    }
+    &-btn {
+      @include makeStateFilled();
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 24.96px;
+    margin-bottom: 19px;
+  }
+}
+
+.woman1 {
+  grid-column: span 2;
+}
+
+.about {
+  padding: 31px 0 70px;
+  background-color: $colorBgGrey;
+  &__wrapper {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__title {
+    margin-bottom: 2px;
+    font-size: 24px;
+    line-height: 30.96px;
+    font-weight: 700;
+    color: $white;
+  }
+
+  &__descr {
+    padding-top: 3px;
+    max-width: 630px;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    color: $lightgrey;
+  }
+  &__right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    &::before {
+      content: "";
+      top: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      min-height: 255px;
+      background: no-repeat center/cover url("images/camera.jpg");
+    }
+    &-title {
+      margin-bottom: 16px;
+      font-size: 24px;
+      line-height: 22px;
+      font-weight: 400;
+      color: $white;
+    }
+    &-form {
+      display: flex;
+      gap: 30px;
+      width: 100%;
+    }
+    &-input {
+      padding: 15px 23px;
+      width: 100%;
+      height: 50px;
+      border: none;
+      color: $white;
+      background-color: $colorInput;
+      &::placeholder {
+        color: $lightgrey;
+      }
+      @include makeStateInp();
+    }
+    &-btn {
+      @include makeStateFilled();
+    }
+  }
+}
+
+.projects {
+  padding: 68px 0 70px;
+  &__title {
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30.96px;
+  }
+  &__top {
+    max-width: 288px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 28px 30px;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+  }
+  &__img {
+    margin-bottom: 18px;
+  }
+  &__descr {
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.1px;
+    font-weight: 400;
+  }
+  &__date {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    color: $colorSpan;
+  }
+  &__icon {
+    width: 14px;
+    height: 14px;
+  }
+  &__item-title {
+    margin-bottom: 6px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  &__btn {
+    border: 3px solid $primary;
+    background-color: inherit;
+    @include makeStateTrs();
+  }
+  .visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+.item1 {
+  grid-column: span 2;
+  &::after {
+    content: "#пейзаж";
+    @include makeHashtag();
+    @include hashtagPosition();
+  }
+  &::before{
+    background: no-repeat center url("images/projects/img1.jpg");
+    @include makeBgImg();
+  }
+  .projects__descr {
+    @include makeLineClamp();
+  }
+
+}
+.item2 {
+  grid-column: span 2;
+  &::after {
+    content: "#портрет";
+    @include makeHashtag();
+    @include hashtagPosition();
+  }
+  &::before{
+  background: no-repeat center url("images/projects/img2.jpg");
+  @include makeBgImg();
+
+  }
+  .projects__descr {
+    @include makeLineClamp();
+  }
+}
+.item3 {
+  grid-column: span 2;
+  &::after {
+    content: "#предмет";
+    @include makeHashtag();
+    @include hashtagPosition();
+  }
+  &::before{
+  background: no-repeat center url("images/projects/img3.jpg");
+  @include makeBgImg();
+
+  }
+  .projects__descr {
+    @include makeLineClamp();
+  }
+}
+.item4 {
+  grid-column: span 6;
+  background: no-repeat center/cover url("images/projects/img4.jpg");
+  &::after {
+    content: "#fuji";
+    @include makeHashtag();
+    @include hashtagPosition();
+  }
+}
+.item5 {
+  grid-column: span 6;
+  background: no-repeat center/cover url("images/projects/img5.jpg");
+  &::after {
+    content: "#проектзабвение";
+    @include makeHashtag();
+    @include hashtagPosition();
+  }
+}
+.item6 {
+  grid-column: span 3;
+  &::after {
+    content: "#ретушь";
+    @include makeHashtag();
+    @include hashtagPosition();
+  }
+  &::before{
+  background: no-repeat center url("images/projects/img6.jpg");
+  @include makeBgImg();
+
+  }
+}
+.item7 {
+  grid-column: span 3;
+  &::after {
+    content: "#портрет";
+    @include makeHashtag();
+    @include hashtagPosition();
+  }
+  &::before{
+  background: no-repeat center url("images/projects/img7.jpg");
+  @include makeBgImg();
+
+  }
+}
+
+.item4,
+.item5 {
+  justify-content: space-between;
+  padding: 26px 30px 30px;
+  color: $white;
+  .projects__date {
+    color: $white;
+  }
+  .projects__btn {
+    padding: 13.5px 22px 12.5px 19px;
+    letter-spacing: -0.5px;
+  }
+}
+
+.contacts {
+  padding-bottom: 71px;
+  &__title {
+    margin-bottom: 22px;
+  }
+  &__wrapper {
+    display: flex;
+    gap: 30px;
+  }
+  &__location {
+    display: flex;
+    max-width: 850px;
+    width: 100%;
+    background: no-repeat center url("images/map.png");
+    background-size: cover;
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__adds {
+    position: relative;
+    padding: 175px 50px 50px 60px;
+    width: 410px;
+    background-color: #202020d9;
+  }
+  &__location-title {
+    margin-bottom: 6px;
+    font-size: 24px;
+    line-height: 22px;
+    font-weight: 400;
+    font-style: normal;
+    color: $white;
+  }
+  &__location-address {
+    margin-bottom: 3px;
+    max-width: 300px;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    font-style: normal;
+    color: $lightgrey;
+  }
+  &__location-phone {
+    display: flex;
+    font-family: "TT Firs Neue", sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20.64px;
+    font-weight: 400;
+    color: $primary;
+    cursor: pointer;
+  }
+  .cross {
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    padding: 0;
+    background-color: initial;
+  }
+  .cross__icon {
+    width: 20px;
+    height: 20px;
+  }
+  &__icon {
+    width: 21px;
+    height: 21px;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__left-title {
+    font-size: 24px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+  &__left-descr {
+    margin-bottom: 14px;
+    max-width: 409px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    letter-spacing: -0.1px;
+    color: $colorSpan;
+  }
+  &__input {
+    margin-bottom: 21px;
+    padding: 15px 23px;
+    border: none;
+    font-size: 16px;
+    line-height: 18.75px;
+    font-weight: 400;
+    background-color: $colorFooterInp;
+    @include makeStateInp();
+  }
+  .comment {
+    padding-bottom: 116px;
+    height: 150px;
+  }
+  &__btn {
+    align-self: start;
+    padding: 15.5px 20px 15.5px 21px;
+    @include makeStateFilled();
+  }
+}
+
+.footer {
+  padding: 23px 0;
+  background-color: $colorBgGrey;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    padding-top: 3px;
+  }
+  &__registered {
+    font-family: "TT Firs Neue", sans-serif;
+    font-size: 14px;
+    line-height: 18.06px;
+    font-weight: 400;
+    color: $colorFooterInp;
+  }
+  &__center {
+    margin-right: 128px;
+    max-width: 361px;
+  }
+  &__quote,
+  &__copyright,
+  &__more {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $lightgrey;
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  &__list {
+    display: flex;
+    gap: 20px;
+  }
+  &__link {
+    outline: none;
+    &:focus .footer__use {
+      color: $secondary;
+    }
+    &:hover .footer__use {
+      color: $primary;
+    }
+    &:active .footer__use {
+      color: $accent;
+    }
+  }
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+  &__use {
+    color: $lightgrey;
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+@import "_media.scss";

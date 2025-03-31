@@ -1,0 +1,86 @@
+@mixin makeHashtag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 6px 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 16.42px;
+  font-weight: 400;
+  color: $white;
+  background-color: $colorBgGrey;
+}
+@mixin makeSmallHashtag {
+  top: 6px;
+  right: 6px;
+  padding: 4px 15px;
+  font-size: 12px;
+  line-height: 14.06px;
+}
+
+@mixin makeStateFilled {
+  transition:
+    color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+  &:focus-visible {
+    outline: 3px solid $accent;
+  }
+  &:hover {
+    background-color: $secondary;
+  }
+  &:active {
+    outline: none;
+    background-color: $accent;
+  }
+}
+
+@mixin makeStateTrs {
+  transition:
+    color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out,
+    border 0.3s ease-in-out;
+  &:focus-visible {
+    background-color: $secondary;
+  }
+  &:hover {
+    background-color: $primary;
+  }
+  &:active {
+    outline: none;
+    border: 3px solid $accent;
+    background-color: $accent;
+  }
+}
+@mixin makeStateInp {
+  outline: none;
+  transition: outline 0.3s ease-in-out;
+  &::placeholder {
+    transition: color 0.3s ease-in-out;
+  }
+  &:focus-visible {
+    outline: 1px solid $primary;
+  }
+  &:hover::placeholder {
+    color: $primary;
+  }
+  &:active {
+    outline: none;
+  }
+}
+@mixin makeLineClamp {
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@mixin hashtagPosition {
+  top: 7px;
+  right: 7px;
+}
+@mixin makeBgImg {
+  content: "";
+  margin-bottom: 18px;
+  width: 100%;
+  height: 184px;
+  background-size: cover;
+}

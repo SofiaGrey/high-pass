@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+  <title>High pass</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__logo">
+        <img class="header__logo-img" src="images/Logo.svg" alt="логотип High pass">
+      </div>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item"><a href="#" class="header__link">О студии</a></li>
+          <li class="header__item"><a href="#" class="header__link">Наши проекты</a></li>
+          <li class="header__item"><a href="#" class="header__link">Услуги</a></li>
+          <li class="header__item"><a href="#" class="header__link">Мастер-классы</a></li>
+          <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
+        </ul>
+      </nav>
+      <button class="btn header__btn" aria-label="Найти">
+        <svg class="header__search">
+          <use xlink:href="images/sprite.svg#search"></use>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <main class="main">
+    <section class="hero">
+      <div class="container hero__container">
+        <div class="hero__left master-class">
+          <p class="hero__left-descr">
+            Мастер-класс от Игоря Робова
+          </p>
+          <h1 class="hero__left-title">Неоновый фотосет&nbsp;2.0 7&nbsp;июля 20:00</h1>
+          <button class="btn hero__left-btn">Узнать больше</button>
+        </div>
+        <div class="hero__right works">
+          <h2 class="hero__title">
+            Работы участников предыдущего мастер-класса
+          </h2>
+          <ul class="hero__list">
+            <li class="hero__item woman1">
+              <picture>
+                <source
+                        media="(max-width: 1366px)"
+                        srcset="images/photo2-1024.jpg">
+                <source
+                        media="(max-width: 969px)"
+                        srcset="images/photo2-768.jpg">
+                <source
+                        media="(min-width: 1367px)"
+                        srcset="images/photo2.jpg">
+                <img alt="Девушка" class="hero__img">
+              </picture>
+            </li>
+            <li class="hero__item"><img src="images/photo3.jpg" alt="Девушка" class="hero__img"></li>
+            <li class="hero__item"><img src="images/photo4.png" alt="Девушка" class="hero__img"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="container about__container">
+        <h2 class="about__title">О студии</h2>
+        <div class="about__wrapper">
+          <p class="about__descr">В рамках спецификации современных стандартов, интерактивные прототипы,
+            инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные
+            выводы неутешительны: высокотехнологичная концепция общественного уклада требует от нас анализа
+            соответствующих условий активизации! Следует отметить, что семантический разбор внешних противодействий
+            фиксирует необходимость распределения внутренних резервов и ресурсов. Безусловно, граница обучения кадров
+            предоставляет широкие возможности для первоочередных требований. Повседневная практика показывает, что
+            глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования
+            материально-технической и кадровой базы. Приятно, граждане, наблюдать, как явные признаки
+            институционализации являются только методом политического участия и нарушающими общечеловеческие нормы
+            этики.</p>
+          <div class="about__right">
+            <div class="about__form-wrapper">
+              <h3 class="about__right-title">Подписаться на рассылку</h3>
+              <form class="about__right-form">
+                <input class="about__right-input" name="email" type="email" placeholder="Email">
+                <button class="btn about__right-btn" type="submit">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects">
+      <div class="container projects__container">
+        <h2 class="projects__title">Наши проекты</h2>
+        <ul class="projects__list">
+          <li class="projects__item item1">
+            <h2 class="visually-hidden">Пейзажная фотография горной реки</h2>
+            <p class="projects__descr">Синтетически, смешаны с&nbsp;не&nbsp;уникальными данными до степени…</p>
+            <span class="projects__date">
+              <svg class="projects__icon">
+                <use xlink:href="images/sprite.svg#calendar"></use>
+              </svg>
+              <time datetime="2024-06-16">16 июня</time>
+            </span>
+          </li>
+          <li class="projects__item item2">
+            <h2 class="visually-hidden">Портрет мужчины</h2>
+            <p class="projects__descr">В своём стремлении улучшить опыт мы упускаем, что явные...</p>
+            <span class="projects__date">
+              <svg class="projects__icon">
+                <use xlink:href="images/sprite.svg#calendar"></use>
+              </svg>
+              <time datetime="2024-05-28">28 мая</time>
+            </span>
+          </li>
+          <li class="projects__item item3">
+            <h2 class="visually-hidden">Фотография предметов в похожей стилистике</h2>
+            <p class="projects__descr">Равным образом, высокое качество позиционных высокотехнологичная концепция
+              общественного уклада</p>
+            <span class="projects__date">
+              <svg class="projects__icon">
+                <use xlink:href="images/sprite.svg#calendar"></use>
+              </svg>
+              <time datetime="2024-05-14">14 мая</time>
+            </span>
+          </li>
+          <li class="projects__item item4">
+            <div class="projects__top">
+              <span class="projects__date">
+                <svg class="projects__icon">
+                  <use class="calendar" xlink:href="images/sprite.svg#calendar"></use>
+                </svg>
+                <time datetime="2024-04-09">9 апреля</time>
+              </span>
+              <h3 class="projects__item-title">Cемантический разбор</h3>
+              <p class="projects__descr">В рамках спецификации современных стандартов, интерактивные прототипы</p>
+            </div>
+            <button class="btn projects__btn">О проекте</button>
+          </li>
+          <li class="projects__item item5">
+            <div class="projects__top">
+              <span class="projects__date">
+                <svg class="projects__icon">
+                  <use xlink:href="images/sprite.svg#calendar"></use>
+                </svg>
+                <time datetime="2024-03-20">20 марта</time>
+              </span>
+              <h3 class="projects__item-title">Забвение</h3>
+              <p class="projects__descr">Играет важную роль в формировании глубокомысленных рассуждений</p>
+            </div>
+            <button class="btn projects__btn">О проекте</button>
+          </li>
+          <li class="projects__item item6">
+            <h2 class="visually-hidden">Отретушированная фотография</h2>
+            <p class="projects__descr">Как принято считать, многие известные&nbsp;личности и по сей день остаются уделом
+              либералов…</p>
+            <span class="projects__date">
+              <svg class="projects__icon">
+                <use xlink:href="images/sprite.svg#calendar"></use>
+              </svg>
+              <time datetime="2024-03-09">9 марта</time>
+            </span>
+          </li>
+          <li class="projects__item item7">
+            <h2 class="visually-hidden">Черно-белый портрет девушки</h2>
+            <p class="projects__descr">С учётом сложившейся международной обстановки, новая модель организационной…
+            </p>
+            <span class="projects__date">
+              <svg class="projects__icon">
+                <use xlink:href="images/sprite.svg#calendar"></use>
+              </svg>
+              <time datetime="2024-03-01">1 марта</time></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="container contacts__container">
+        <h2 class="contacts__title">Контакты</h2>
+        <div class="contacts__wrapper">
+          <div class="contacts__location">
+            <address class="contacts__adds">
+              <h2 class="contacts__location-title">Студия «High pass»</h2>
+              <div class="contacts__location-wrapper">
+                <p class="contacts__location-address">107045, Москва, Даев переулок, дом&nbsp;41, бизнес-центр «Даев
+                  Плаза»,
+                  этаж 8, офис № 82</p>
+                <a class="contacts__location-phone">
+                  <svg class="contacts__icon">
+                    <use xlink:href="images/sprite.svg#telephone"></use>
+                  </svg>
+                  +7 495 424-23-532
+                </a>
+              </div>
+              <button class="btn cross" aria-label="Закрыть">
+                <svg class="cross__icon">
+                  <use xlink:href="images/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </address>
+          </div>
+          <div class="contacts__left">
+            <h2 class="contacts__left-title">Оставить заявку</h2>
+            <p class="contacts__left-descr">Оставьте ваши данные, указав в графе «Комментарий» желаемые время и дату
+              съёмки или другого мероприятия</p>
+            <form class="contacts__form">
+              <input type="text" name="name" class="contacts__input input-name" placeholder="Имя">
+              <input type="text" name="email" class="contacts__input input-email" placeholder="Email">
+              <input type="text" name="comment" class="contacts__input comment" placeholder="Комментарий">
+              <button class="btn contacts__btn" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__left">
+        <div class="footer__logo">
+          <img class="footer__logo-img" src="images/Logo.svg" alt="логотип High pass">
+        </div>
+        <p class="footer__registered">Фотостудия High pass® 2018–2020</p>
+      </div>
+      <div class="footer__center">
+        <p class="footer__quote">Которая из моих фотографий самая любимая? Та, которую я собираюсь снять завтра.</p>
+        <p class="footer__copyright">© Имоджен Каннингем</p>
+      </div>
+      <div class="footer__right">
+        <p class="footer__more">Больше интересного:</p>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="#" class="footer__link" aria-label="на одноклассники">
+              <svg class="footer__icon">
+                <use class="footer__use" xlink:href="images/sprite.svg#ok"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link" aria-label="на в контакте">
+              <svg class="footer__icon">
+                <use class="footer__use" xlink:href="images/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

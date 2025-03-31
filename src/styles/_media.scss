@@ -1,0 +1,611 @@
+@media (max-width: 1366px) {
+  .container {
+    padding: 0 30px;
+  }
+  .header {
+    margin-bottom: 33px;
+    &__logo {
+      flex-shrink: 1;
+      margin-right: 81px;
+      padding-top: 5px;
+      width: 166px;
+    }
+    &__list {
+      gap: 0 34px;
+    }
+  }
+
+  .hero {
+    &__left {
+      padding: 30px;
+      &-title {
+        margin-bottom: 22px;
+        font-size: 34px;
+        line-height: 34px;
+      }
+      &-descr {
+        margin-bottom: 11px;
+      }
+    }
+    &__title {
+      margin-bottom: 25px;
+    }
+    &__list {
+      grid-template-rows: 1fr 1fr 186px;
+    }
+    &__img {
+      width: 100%;
+      height: 100%;
+    }
+    .woman1 {
+      grid-row: span 2;
+    }
+  }
+
+  .about {
+    padding: 30px 0 81px;
+    &__descr {
+      margin-bottom: 7px;
+      width: 100%;
+      max-width: 466px;
+    }
+    &__right {
+      &::before {
+        min-height: 332px;
+        background: no-repeat center/cover url("images/camera-1024.jpg");
+      }
+      &-form {
+        align-items: end;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      &-title {
+        margin-bottom: 16px;
+      }
+      &-input {
+        width: 344px;
+      }
+    }
+  }
+
+  .contacts {
+    margin-bottom: 68px;
+    &__title {
+      margin-bottom: 24px;
+    }
+    &__location {
+      align-items: end;
+      &-wrapper {
+        flex-direction: row;
+      }
+      &-phone {
+        align-items: end;
+        padding-bottom: 6px;
+      }
+      &-address {
+        margin-bottom: 0;
+      }
+      &-title {
+        margin-bottom: 6px;
+      }
+    }
+    &__adds {
+      width: 100%;
+      max-height: 157px;
+      padding: 25px 30px;
+      &::after {
+        top: -208px;
+        right: 96px;
+      }
+    }
+    &__left {
+      width: 100%;
+      max-width: 342px;
+      &-descr {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  .footer {
+    padding: 25px 0;
+    &__center {
+      margin-right: 71px;
+      // padding-top: 3px;
+    }
+    &__logo {
+      padding-top: 6px;
+    }
+    &__logo-img {
+      width: 166px;
+    }
+    &__left {
+      margin-right: auto;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects {
+    &__list {
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: 1fr 307px 307px;
+      gap: 23px 30px;
+    }
+    &__item {
+      justify-content: start;
+    }
+    &__descr {
+      margin-bottom: 22px;
+    }
+    .item1,
+    .item2 {
+      grid-column: span 2;
+      .projects__descr {
+        -webkit-line-clamp: 2;
+      }
+    }
+    .img3 {
+      background: no-repeat url("images/projects/img3-1024.jpg");
+    }
+    .item3 {
+      grid-column: span 4;
+    }
+    .item4,
+    .item5 {
+      grid-column: span 5;
+      justify-content: space-between;
+      padding: 34px 30px 30px;
+    }
+    .item6 {
+      grid-column: span 3;
+      order: 0;
+    }
+    .item7 {
+      grid-column: span 3;
+    }
+    .item5 {
+      grid-column: span 5;
+      order: 1;
+    }
+  }
+
+  .contacts {
+    &__location {
+      background-position: -132px 0;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 27px;
+    justify-content: space-between;
+  }
+  .header {
+    position: relative;
+    margin-bottom: 36px;
+    height: 124px;
+    &__container {
+      flex-wrap: wrap;
+    }
+    &__logo,
+    &__btn {
+      order: 1;
+    }
+    &__logo-img {
+      max-width: 166px;
+    }
+    &__nav {
+      position: absolute;
+      order: 2;
+      bottom: 0;
+      left: 0;
+      padding: 12px 27px 11px;
+      width: 100%;
+      background-color: $colorInput;
+      scrollbar-width: none;
+      overflow: scroll;
+    }
+    &__list {
+      gap: 72px;
+    }
+  }
+
+  .hero {
+    &__title {
+      margin-bottom: 16px;
+      font-size: 22px;
+      line-height: 22.88px;
+    }
+    &__list {
+      grid-template-rows: 99px 99px 133px;
+    }
+    &__left {
+      padding: 30px 28px;
+      &-title {
+        line-height: 30.6px;
+      }
+      &-descr {
+        margin-bottom: 18px;
+      }
+    }
+  }
+  .projects {
+    &__list {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 302px 300px 308px 301px;
+    }
+    &__descr {
+      margin-bottom: 14px;
+    }
+    .item1,
+    .item2 {
+      .projects__descr {
+        -webkit-line-clamp: 3;
+      }
+    }
+    .item3 {
+      grid-column: span 2;
+    }
+    .item4,
+    .item5 {
+      grid-column: span 6;
+    }
+
+    .item6,
+    .item7 {
+      .projects__descr {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .contacts {
+    &__wrapper {
+      height: auto;
+      flex-wrap: wrap;
+    }
+    &__location {
+      height: 460px;
+      background-position: 0;
+    }
+    &__adds {
+      padding: 26px 30px 26px;
+    }
+    &__location {
+      &-wrapper {
+        max-width: 100%;
+        width: 100%;
+        flex-direction: column;
+      }
+      &-address {
+        margin-bottom: 3px;
+        max-width: 436px;
+      }
+      &-title {
+        margin-bottom: 6px;
+      }
+      &-phone {
+        padding-bottom: 0;
+      }
+    }
+    &__left {
+      max-width: 466px;
+      &-descr {
+        margin-bottom: 12px;
+        max-width: 466px;
+      }
+    }
+  }
+
+  .footer__center {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 30px 0 62px;
+    &__right {
+      &::before {
+        min-height: 569px;
+      }
+      &-form {
+        padding-bottom: 7px;
+      }
+    }
+    &__descr {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 686px) {
+  .about {
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__right {
+      &::before {
+        min-height: 278px;
+      }
+    }
+    &__descr {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .btn {
+    padding: 12px 22px;
+    font-size: 14px;
+    line-height: 16.41px;
+  }
+  .container {
+    padding: 0 21px;
+  }
+  .header {
+    margin-bottom: 31px;
+    height: 114px;
+    &__logo {
+      margin-right: 0;
+      padding-top: 0;
+      &-img {
+        width: 111.55px;
+      }
+    }
+    &__container {
+      padding: 0 21px 6px;
+    }
+    &__search {
+      width: 20px;
+      height: 20px;
+    }
+    &__nav {
+      scrollbar-width: none;
+      overflow: scroll;
+    }
+    &__list {
+      gap: 18px;
+    }
+    &__btn {
+      padding: 0;
+    }
+  }
+  .hero {
+    margin-bottom: 51px;
+    &__container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 422px 1fr;
+      gap: 34px 30px;
+    }
+    &__list {
+      grid-template-rows: 78px 78px 105px;
+    }
+    &__left {
+      &::before {
+        top: 6px;
+        right: 7px;
+        padding: 4px 7px;
+        font-size: 12px;
+        line-height: 14.06px;
+      }
+      &-title {
+        margin-bottom: 14px;
+        font-size: 24px;
+        line-height: 26.4px;
+      }
+      &-descr {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 16.41px;
+      }
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 18.72px;
+    }
+  }
+
+  .about {
+    padding: 30px 0 53px;
+    &__wrapper {
+      row-gap: 24px;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 23.22px;
+    }
+    &__descr {
+      font-size: 14px;
+      line-height: 25px;
+    }
+    &__right {
+      row-gap: 24px;
+      &-title {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      &-input {
+        height: 39px;
+      }
+      &-btn {
+        padding: 12px 21px;
+      }
+    }
+  }
+  .projects {
+    padding: 50px 0 34px;
+    &__title {
+      margin-bottom: 15px;
+      font-size: 18px;
+      line-height: 23.22px;
+    }
+    &__list {
+      grid-template-columns: 1fr;
+      grid-template-rows: 304px 284px 281px 420px 309px 306px 420px;
+      gap: 21px 30px;
+    }
+    &__item-title {
+      margin-bottom: 10px;
+    }
+    &__descr {
+      margin-bottom: 15px;
+    }
+    &__date {
+      margin-bottom: 9px;
+    }
+
+    .item3 .projects__descr {
+      -webkit-line-clamp: 2;
+    }
+    .item6,
+    .item7 {
+      .projects__descr {
+        margin-bottom: 17px;
+      }
+    }
+
+    .item4,
+    .item5 {
+      justify-content: end;
+      .projects__descr {
+        margin-bottom: 18px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+      .projects__btn {
+        padding: 6.5px 22px 10.5px 17px;
+      }
+    }
+    .item5 {
+      .projects__descr {
+        max-width: 144px;
+        margin-bottom: 24px;
+      }
+    }
+    .item1,
+    .item2,
+    .item3,
+    .item4,
+    .item5,
+    .item6,
+    .item7 {
+      &::after {
+        @include makeSmallHashtag();
+      }
+      grid-column: 1 / -1;
+    }
+  }
+
+  .contacts {
+    margin-bottom: 50px;
+    &__container {
+      padding: 0;
+    }
+    &__wrapper {
+      position: relative;
+    }
+    &__title {
+      margin-bottom: 14px;
+      padding-left: 20px;
+      font-size: 18px;
+      line-height: 23.22px;
+    }
+    &__location {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 471px;
+      &-title {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      &-address {
+        margin-bottom: 13px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+      &-phone {
+        align-items: start;
+        column-gap: 4px;
+        font-size: 14px;
+        line-height: 18.06px;
+      }
+    }
+    &__icon {
+      width: 15px;
+      height: 15px;
+    }
+
+    &__left {
+      padding: 502px 21px 0;
+      &-title {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      &-descr {
+        margin-bottom: 16px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    &__adds {
+      height: 157px;
+      padding: 27px 19px;
+    }
+    &__input {
+      padding: 11px 23px;
+      font-size: 14px;
+      line-height: 16.41px;
+    }
+    .cross {
+      top: 21px;
+      right: 21px;
+    }
+    .input-name {
+      margin-bottom: 22px;
+    }
+    .input-email {
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer {
+    position: relative;
+    height: 185px;
+    padding: 30px 0 13px;
+    &__container {
+      justify-content: center;
+    }
+    &__right {
+      order: 1;
+    }
+    &__left {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      order: 2;
+      margin-right: 0;
+      height: 62px;
+      background-color: $colorInput;
+    }
+    &__logo {
+      padding-top: 14px;
+      &-img {
+        width: 111.55px;
+      }
+    }
+    &__registered {
+      font-size: 10px;
+      line-height: 12.9px;
+    }
+  }
+}
